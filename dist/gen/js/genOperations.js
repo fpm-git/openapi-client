@@ -146,7 +146,7 @@ function renderReturnSignature(op, options) {
     if (options.language !== 'ts')
         return '';
     const response = util_1.getBestResponse(op);
-    return `: Promise<api.Response<${support_1.getTSParamType(response)}>>`;
+    return `: Promise<${support_1.getTSParamType(response)}>`;
 }
 function getParamSignature(param, options) {
     const signature = [getParamName(param.name)];
